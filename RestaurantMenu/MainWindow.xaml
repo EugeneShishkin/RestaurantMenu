@@ -1,0 +1,48 @@
+﻿<Window x:Class="RestaurantMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:my="clr-namespace:RestaurantMenu">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Menu Items:" Grid.Row="0" Grid.Column="0" TextAlignment="Right" Padding="5" FontSize="13"></TextBlock>
+        <ComboBox Name="nameList" Grid.Row="0" Grid.Column="2" IsEditable="True" Text="- Select an item -" HorizontalAlignment="Center"></ComboBox>
+        <Button Name="btnSubmit" Grid.Row="0" Grid.Column="4" Content="Add to order" Click="btnSubmit_Click"></Button>
+
+        <TextBlock Text="Quantity:" Grid.Row="1" Grid.Column="0" TextAlignment="Right" Padding="5" FontSize="13"></TextBlock>
+        <TextBox Name="quantity" Grid.Row="1" Grid.Column="2"></TextBox>
+
+        <TextBlock Text="Total:" Grid.Row="3" Grid.Column="0" TextAlignment="Right" Padding="5" FontSize="13"></TextBlock>
+        <TextBox Name="due" Grid.Row="3" Grid.Column="2"></TextBox>
+        <Button Name="btnClear" Grid.Row="3" Grid.Column="4" Content="Clear" Click="btnClear_Click"/>
+
+        <TextBlock Text="Cash tendered:" Grid.Row="5" Grid.Column="0" TextAlignment="Right" Padding="5" FontSize="13"></TextBlock>
+        <TextBox Name="cash" Grid.Row="5" Grid.Column="2"></TextBox>
+
+        <Button Name="btnCalculate" Grid.Row="6" Grid.Column="0" Content="Calculate Change" Click="btnCalculate_Click"></Button>
+        <TextBox Name="change" Grid.Row="6" Grid.Column="2"></TextBox>
+        
+        <Calendar Grid.Column="4" HorizontalAlignment="Left" Height="174" Margin="0,10,-100,-132" Grid.Row="6" VerticalAlignment="Top" Width="233" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
